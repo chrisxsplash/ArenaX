@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Planner - ArenaX</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="planner.css">
+</head>
+<body>
+  <div class="sidebar" id="sidebar">
+    <div class="nav-item" data-url="ArenaX home.html">
+      <img src="icons/home.svg" alt="Home">
+      <span>Home</span>
+    </div>
+    <div class="nav-item" data-url="calendar.html">
+      <img src="icons/calendar.svg" alt="Calendar">
+      <span>Calendar</span>
+    </div>
+    <div class="nav-item" data-url="arena.html">
+      <img src="icons/arena.svg" alt="Arena">
+      <span>Arena</span>
+    </div>
+    <div class="nav-item" data-url="checkout.html">
+      <img src="icons/checkout.svg" alt="Checkout">
+      <span>Checkout</span>
+    </div>
+    <div class="nav-item" id="chatbot-toggle">
+      <img src="icons/chatbot.svg" alt="Chatbot">
+      <span>Chatbot</span>
+    </div>
+  </div>
+
+  <div class="planner-container">
+    <h1 class="planner-header">ArenaX Planner</h1>
+    <div class="planner-content">
+      <div class="section">
+        <h2>Arena Rental</h2>
+        <p>For arena rental inquiries, please contact us at:</p>
+        <p>Email: rental@arenax.com</p>
+        <p>Phone: (123) 456-7890</p>
+      </div>
+      <div class="section">
+        <h2>Contact Information</h2>
+        <p>For general inquiries, please contact us at:</p>
+        <p>Email: info@arenax.com</p>
+        <p>Phone: (123) 456-7890</p>
+      </div>
+      <div class="section">
+        <h2>Directions</h2>
+        <p>Find us at:</p>
+        <p>123 Arena Street, City, State, ZIP</p>
+        <p>Get directions on <a href="https://maps.google.com" target="_blank">Google Maps</a>.</p>
+      </div>
+      <div class="section">
+        <h2>Seating Charts</h2>
+        <p>View our seating charts:</p>
+        <a href="seating.html" target="_blank">
+          <img src="images/seating-chart.jpg" alt="Seating Chart" class="seating-chart">
+        </a>
+      </div>
+      <div class="section">
+        <h2>Policies</h2>
+        <p>Read our policies:</p>
+        <ul>
+          <li><a href="policies.html" target="_blank">General Policies</a></li>
+          <li><a href="policies.html#covid" target="_blank">COVID-19 Policies</a></li>
+          <li><a href="policies.html#security" target="_blank">Security Policies</a></li>
+        </ul>
+      </div>
+      <div class="section">
+        <h2>Amenities</h2>
+        <p>Enjoy our amenities:</p>
+        <ul>
+          <li>Free Wi-Fi</li>
+          <li>Food and Beverage Concessions</li>
+          <li>Merchandise Shops</li>
+          <li>Accessible Seating</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <div id="chatbot-popup" class="chatbot-popup" style="display: none;">
+    <div class="chatbot-popup-content">
+      <span class="close-button" onclick="closeChatbot()">&times;</span>
+      <div id="JotformAgent-019528f94bf27d0e9e1b984f935db07c71e8"></div>
+    </div>
+  </div>
+
+  <script src="https://cdn.jotfor.ms/s/umd/latest/for-embedded-agent.js"></script>
+  <script>
+    window.addEventListener("DOMContentLoaded", function() {
+      window.AgentInitializer.init({
+        rootId: "JotformAgent-019528f94bf27d0e9e1b984f935db07c71e8",
+        formID: "019528f94bf27d0e9e1b984f935db07c71e8",
+        queryParams: ["skipWelcome=1", "maximizable=1"],
+        domain: "https:\/\/www.jotform.com",
+        isInitialOpen: false,
+        isDraggable: false,
+        background: "linear-gradient(180deg, #C8CEED 0%, #C8CEED 100%)",
+        buttonBackgroundColor: "#0a1551",
+        buttonIconColor: "#fff",
+        variant: false,
+        customizations: {
+          greeting: "Yes",
+          greetingMessage: "Hi! How can I assist you?",
+          pulse: "Yes",
+          position: "left"
+        }
+      });
+    });
+  </script>
+  <script src="planner.js"></script>
+</body>
+</html>

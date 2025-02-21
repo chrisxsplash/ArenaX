@@ -1,0 +1,82 @@
+body {
+    margin: 0;
+    overflow: hidden; /* Prevent scrolling when the nav is open */
+  }
+  
+  .nav-button {
+    position: fixed;
+    bottom: 2vw;
+    right: 2vw;
+    width: 4vw;
+    height: 4vw;
+    background-color: #444;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    z-index: 1000;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  }
+  
+  .nav-button:hover {
+    background-color: #666;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.5);
+  }
+  
+  .nav-icon {
+    font-size: 2vw;
+    color: #fff;
+  }
+  
+  .circular-nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.9);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    transition: opacity 0.5s ease;
+    z-index: 999;
+    opacity: 0;
+    pointer-events: none;
+  }
+  
+  .circular-nav.open {
+    opacity: 1;
+    pointer-events: auto;
+  }
+  
+  .nav-item {
+    width: 20vw;
+    height: 20vw;
+    background: linear-gradient(145deg, #444, #333);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    text-decoration: none;
+    font-size: 2vw;
+    margin: 2vw;
+    transition: background 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+    animation: float 5s ease-in-out infinite;
+  }
+  
+  .nav-item:hover {
+    background: linear-gradient(145deg, #666, #555);
+    transform: scale(1.1);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.5);
+  }
+  
+  @keyframes float {
+    0% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+    100% { transform: translateY(0); }
+  }

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Seating Chart - ArenaX</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="seating.css">
+</head>
+<body>
+  <div class="seating-container">
+    <h1 class="seating-header">Seating Chart</h1>
+    <div class="viewer">
+      <h2>View from Seat</h2>
+      <div id="seat-view"></div>
+    </div>
+    <div class="seating-charts">
+      <div class="chart-2d">
+        <h2>2D View</h2>
+        <canvas id="seating-chart-2d"></canvas>
+      </div>
+      <div class="chart-3d">
+        <h2>3D View</h2>
+        <div id="seating-chart-3d"></div>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+  <script src="seating.js"></script>
+</body>
+</html>

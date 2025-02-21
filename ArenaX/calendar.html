@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Calendar - ArenaX</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="calendar.css">
+</head>
+<body>
+  <div class="calendar-container">
+    <h1 class="calendar-header">Calendar of Events</h1>
+    <div class="calendar-navigation">
+      <button class="nav-button" id="prevMonth">&lt;</button>
+      <h2 id="monthName">March</h2>
+      <button class="nav-button" id="nextMonth">&gt;</button>
+    </div>
+    <div class="days-of-week">
+      <div>Sun</div>
+      <div>Mon</div>
+      <div>Tue</div>
+      <div>Wed</div>
+      <div>Thu</div>
+      <div>Fri</div>
+      <div>Sat</div>
+    </div>
+    <div class="days" id="daysContainer">
+      <!-- Days will be dynamically generated here -->
+    </div>
+  </div>
+
+  <div id="eventPopup" class="event-popup" style="display: none;">
+    <div class="event-popup-content">
+      <span class="close-button" onclick="closePopup()">&times;</span>
+      <h2 id="eventTitle"></h2>
+      <p id="eventDescription"></p>
+    </div>
+  </div>
+
+  <script src="calendar.js"></script>
+</body>
+</html>

@@ -1,0 +1,139 @@
+@import url('https://fonts.googleapis.com/css2?family=Alata&display=swap');
+
+body {
+  font-family: 'Alata', sans-serif; /* Apply the Google Font */
+  background-color: #000; /* Black background */
+  color: #ccc; /* Light grey text */
+  margin: 0;
+  padding: 0;
+  overflow-y: auto; /* Make the page scrollable */
+}
+
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 60px;
+  height: 100%;
+  background-color: #222; /* Slightly lighter grey background */
+  overflow-x: hidden;
+  transition: 0.5s;
+  z-index: 3;
+}
+
+.sidebar:hover {
+  width: 200px;
+}
+
+.sidebar .nav-item {
+  display: flex;
+  align-items: center;
+  padding: 1vw;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  clip-path: polygon(0 0, 100% 0, 80% 100%, 0% 100%);
+  margin-bottom: 1vw;
+}
+
+.sidebar .nav-item img {
+  width: 24px;
+  height: 24px;
+  margin-right: 1vw;
+}
+
+.sidebar .nav-item span {
+  display: none;
+  font-size: 1.5vw;
+  color: #ccc; /* Light grey text */
+}
+
+.sidebar:hover .nav-item span {
+  display: inline;
+}
+
+.sidebar .nav-item:hover {
+  background-color: #444;
+}
+
+.planner-container {
+  padding: 2vw;
+  text-align: left;
+  margin-left: 60px;
+  transition: margin-left 0.5s;
+}
+
+.sidebar:hover ~ .planner-container {
+  margin-left: 200px;
+}
+
+.planner-header {
+  font-size: 4vw;
+  color: #ccc; /* Light grey text */
+  margin-bottom: 2vw;
+}
+
+.planner-content {
+  background-color: #222; /* Slightly lighter grey background */
+  padding: 2vw;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.section {
+  margin-bottom: 2vw;
+}
+
+.section h2 {
+  font-size: 2.5vw;
+  color: #fff; /* White text */
+  margin-bottom: 1vw;
+}
+
+.section p, .section ul {
+  font-size: 1.5vw;
+  color: #ccc; /* Light grey text */
+}
+
+.section ul {
+  list-style-type: disc;
+  padding-left: 2vw;
+}
+
+.seating-chart {
+  width: 100%;
+  max-width: 600px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.chatbot-popup {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 2; /* Ensure the popup is above other elements */
+}
+
+.chatbot-popup-content {
+  background-color: #111;
+  padding: 2vw;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  width: 80%;
+  max-width: 600px;
+  text-align: center;
+}
+
+.close-button {
+  position: absolute;
+  top: 1vw;
+  right: 1vw;
+  font-size: 3vw;
+  color: #ccc; /* Light grey text */
+  cursor: pointer;
+}

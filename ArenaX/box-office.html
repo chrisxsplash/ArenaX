@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Box Office - ArenaX</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="box-office.css">
+</head>
+<body>
+  <div class="box-office-container">
+    <h1 class="box-office-header">Box Office</h1>
+    <form class="box-office-form" id="boxOfficeForm">
+      <div class="form-group">
+        <label for="event">Event</label>
+        <select id="event" name="event" required>
+          <option value="">Select an event</option>
+          <option value="concert">Concert</option>
+          <option value="sports">Sports</option>
+          <option value="trade-show">Trade Show</option>
+          <option value="community-event">Community Event</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label for="quantity">Quantity</label>
+        <input type="number" id="quantity" name="quantity" min="1" max="10" required>
+      </div>
+      <div class="form-group">
+        <label for="name">Name</label>
+        <input type="text" id="name" name="name" required>
+      </div>
+      <div class="form-group">
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email" required>
+      </div>
+      <div class="form-group">
+        <label for="phone">Phone</label>
+        <input type="tel" id="phone" name="phone" required>
+      </div>
+      <div class="form-group">
+        <label for="card">Credit Card Number</label>
+        <input type="text" id="card" name="card" required>
+      </div>
+      <div class="form-group">
+        <label for="expiry">Expiry Date</label>
+        <input type="text" id="expiry" name="expiry" required>
+      </div>
+      <div class="form-group">
+        <label for="cvv">CVV</label>
+        <input type="text" id="cvv" name="cvv" required>
+      </div>
+      <button type="submit" class="box-office-button">Purchase</button>
+    </form>
+    <div id="successMessage" class="success-message" style="display: none;">
+      <h2>Purchase Successful!</h2>
+      <p>A receipt will be sent to the provided email.</p>
+      <button onclick="window.location.href='ArenaX home.html'" class="home-button">Go to Home</button>
+    </div>
+  </div>
+  <script src="box-office.js"></script>
+</body>
+</html>

@@ -1,0 +1,78 @@
+@import url('https://fonts.googleapis.com/css2?family=Alata&display=swap');
+
+body {
+  font-family: 'Alata', sans-serif; /* Apply the Google Font */
+  background-color: #000; /* Black background */
+  color: #ccc; /* Light grey text */
+  margin: 0;
+  padding: 0;
+  overflow-y: auto; /* Make the page scrollable */
+}
+
+.seating-container {
+  padding: 2vw;
+  text-align: left;
+}
+
+.seating-header {
+  font-size: 4vw;
+  color: #ccc; /* Light grey text */
+  margin-bottom: 2vw;
+}
+
+.viewer {
+  background-color: #222; /* Slightly lighter grey background */
+  padding: 2vw;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  margin-bottom: 2vw;
+}
+
+.viewer h2 {
+  font-size: 2.5vw;
+  color: #fff; /* White text */
+  margin-bottom: 1vw;
+}
+
+#seat-view {
+  width: 100%;
+  height: 300px;
+  background-color: #333; /* Dark grey background */
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.seating-charts {
+  display: flex;
+  justify-content: space-between;
+}
+
+.chart-2d, .chart-3d {
+  width: 48%;
+  background-color: #222; /* Slightly lighter grey background */
+  padding: 2vw;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.chart-2d h2, .chart-3d h2 {
+  font-size: 2.5vw;
+  color: #fff; /* White text */
+  margin-bottom: 1vw;
+}
+
+#seating-chart-2d {
+  width: 100%;
+  height: 300px;
+  background-color: #333; /* Dark grey background */
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+#seating-chart-3d {
+  width: 100%;
+  height: 300px;
+  background-color: #333; /* Dark grey background */
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
